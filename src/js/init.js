@@ -30,7 +30,7 @@ export default class Character {
           alert("Вы проиграли!"); // eslint-disable-line no-alert
         }
       }
-
+      
       previous = i;
       this.cell[i].appendChild(this.icon);
     }, 1000);
