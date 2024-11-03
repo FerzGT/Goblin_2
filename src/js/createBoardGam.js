@@ -10,9 +10,8 @@ export default class Board {
         this.__boardEL = boardEL;
     }
     createBoard(cage) {
-        let craseBoard = document.createElement("div");
-        craseBoard.classList.add("board");
-
+        let craseBoard = document.querySelectorAll("grid-container");
+        
         for (let i = 0; i < cage; i++) {
             createB('grid-row');
                         
