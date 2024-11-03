@@ -1,3 +1,10 @@
+function createB(ClassBoard) {
+    const cell = document.createElement('div');
+    cell.classList.add(ClassBoard);
+    this.boardEl.appendChild(cell);
+}
+
+
 export default class Board {
     constructor (boardEL){
         this.__boardEL = boardEL;
@@ -10,11 +17,7 @@ export default class Board {
             createB('grid-cell');
              
         }
-        function createB(ClassBoard) {
-            const cell = document.createElement('div');
-            cell.classList.add(ClassBoard);
-             boardEl.appendChild(cell);
-        }
+
       }
       this.__boardEL.appendChild(cell);
 }
