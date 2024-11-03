@@ -2,6 +2,14 @@ export default class Board {
     constructor (boardEL){
         this.boardEL = boardEL;
     }
+
+        function createB(ClassBoard) {
+            const cell = document.createElement('div');
+            cell.classList.add(ClassBoard);
+             boardEl.appendChild(cell);
+        }
+
+
     createBoard(cage) {
         const boardEL = document.getElementById('grid-container');
         boardEL.classList.add('cursor');
@@ -12,11 +20,6 @@ export default class Board {
             createB('grid-cell');
              
         }
-        function createB(ClassBoard) {
-            const cell = document.createElement('div');
-            cell.classList.add(ClassBoard);
-             boardEl.appendChild(cell);
-        }
-      }
+     } 
 }
 }
