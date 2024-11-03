@@ -1,23 +1,21 @@
 export default class Board {
-    
-    constructor (){
-        this.boardEL = boardEL;
+    constructor (boardEL){
+        this.__boardEL = boardEL;
     }
     createBoard(cage) {
-        const boardEL = document.getElementById('grid-container');
-        boardEL.classList.add('cursor');
         for (let i = 0; i < cage; i++) {
-            
-            const cell = document.createElement('div');
-            cell.classList.add('grid-row');
-            boardEl.appendChild(cell);
+            createB('grid-row');
                   
-        for (let j = 0; j < cage; j++) {
-
+            for (let j = 0; j < cage; j++) {
+            createB('grid-cell');
+             
+        }
+        function createB(ClassBoard) {
             const cell = document.createElement('div');
-            cell.classList.add('grid-cell');
-            boardEl.appendChild(cell);
+            cell.classList.add(ClassBoard);
+             boardEl.appendChild(cell);
         }
       }
+      this.__boardEL.appendChild(cell);
 }
 }
