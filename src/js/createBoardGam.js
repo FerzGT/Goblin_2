@@ -13,10 +13,10 @@ export default class Board {
         let craseBoard = document.querySelectorAll("grid-container");
         
         for (let i = 0; i < cage; i++) {
-            createB('grid-row');
+            this.createB('grid-row');
                         
             for (let j = 0; j < cage; j++) {
-            createB('grid-cell');
+            this.createB('grid-cell');
             }
       }
       this.__boardEL.appendChild(craseBoard);
