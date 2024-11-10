@@ -17,11 +17,8 @@ export default class Board {
                         
             for (let j = 0; j < cage; j++) {
             createB('grid-cell');
-
-             
-        }
-
+            }
       }
       this.__boardEL.appendChild(craseBoard);
-}
+    }
 }
