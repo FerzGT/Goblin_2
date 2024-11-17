@@ -1,9 +1,9 @@
 export default class Board {
-  constructor (boardEL){
-      this.boardEL = boardEL;
+  constructor (classBoard){
+      this.boardEL = document.getElementById(classBoard);
   }
   createBoard(cage) {
-      const boardEL = document.getElementById('field');
+     // const boardEL = document.getElementById('field');
       boardEL.classList.add('cursor');
       for (let i = 0; i < cage; i++) {
         this.createB('grid-row');
