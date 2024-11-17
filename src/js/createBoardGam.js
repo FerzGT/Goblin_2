@@ -1,17 +1,22 @@
 export default class Board {
-    constructor (boardEL){
-        this.boardEl = boardEl;
-        this.boardsCells = [];
-        }
-
-        createBoard(cage) {
-            const boardEl = document.getElementById('board');
-            boardEl.classList.add('cursor');
-            for (let i = 0; i < cage; i++) {
-              const cell = document.createElement('div');
-              cell.classList.add('game-cell');
-              boardEl.appendChild(cell);
-              this.randomImg();
-            }
-          }
+  constructor (boardEL){
+      this.boardEL = boardEL;
+  }
+  createBoard(cage) {
+      const boardEL = document.getElementById('field');
+      boardEL.classList.add('cursor');
+      for (let i = 0; i < cage; i++) {
+          createB('grid-row');
+                
+          for (let j = 0; j < cage; j++) {
+          createB('grid-cell');
+           
+      }
+      function createB(ClassBoard) {
+          const cell = document.createElement('div');
+          cell.classList.add(ClassBoard);
+           boardEl.appendChild(cell);
+      }
+    }
+}
 }
