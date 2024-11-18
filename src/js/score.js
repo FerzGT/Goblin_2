@@ -1,33 +1,37 @@
 export default class Score {
-    constructor(elem) {
-      this.elem = elem;
-      this.infoMsg = elem.querySelector(".info .msg");
-      this.infoMiss = elem.querySelector(".info .miss");
+    constructor() {
     }
   
-    init() {
-      this.msg = 0;
-      this.miss = 0;
+    static click() {
+      const field = document.querySelectorAll(".grid-cell");
+      field.forEach((element) => {
+        element.addEventListener("click", function (e) {
+          if (e.target.alt === "Гоблин") {
+            //Прибавляем количество попаданий
+            let strikeElement = document.querySelector(".msg");
+            let points = +strikeElement.textContent;
+            points += 1;
+            strikeElement.textContent = points;
   
-      this.elem.addEventListener("click", (e) => {
-        const cell = e.target.closest(".grid-cell");
-        if (cell) {
-          const icon = cell.querySelector(".icon");
-          if (icon) {
-            this.hit();
-            icon.remove();
+            //Уменьшаем количество появлений гоблина
+            const noStrike = document.querySelector(".miss");
+            let noStrikeCount = +noStrike.textContent;
+            noStrikeCount -= 1;
+            noStrike.textContent = noStrikeCount;
+  
+            e.target.classList.add("hide");
+  
+            //Удаляем гоблина из ячейки
           }
-        }
+        });
+        element.addEventListener("mouseenter", function () {
+          if (element.childElementCount) {
+            element.classList.add("cursor");
+          }
+        });
+        element.addEventListener("mouseleave", function () {
+          element.classList.remove("cursor");
+        });
       });
-    }
-  
-    hit() {
-      this.msg += 1;
-      this.infoMsg.textContent = this.msg;
-    }
-  
-    missed() {
-      this.miss += 1;
-      this.infoMiss.textContent = this.miss;
     }
   }
