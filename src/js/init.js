@@ -1,12 +1,12 @@
 export default class Character {
-  constructor() {
-  }
+  constructor() {}
 
   static randomGoblin() {
     document.addEventListener("DOMContentLoaded", () => {
       const newDiv = document.createElement("div");
       const img = document.createElement("img");
-      img.src = "https://github.com/netology-code/ahj-homeworks/raw/AHJ-50/dom/pic/goblin.png";
+      img.src =
+        "https://github.com/netology-code/ahj-homeworks/raw/AHJ-50/dom/pic/goblin.png";
       img.alt = "Гоблин";
       newDiv.appendChild(img);
 
