@@ -1,6 +1,9 @@
-import Character from "./init";
 import Board from "./createBoardGam"
+import Character from "./init";
+import Score from "./score";
 
-Board.createBoard(4);
-const Game = new Character(document.querySelector(".grid-container"));
-Game.init();
+const gamesBoard = new Board('field');
+gamesBoard.createBoard(4);
+
+Character.randomGoblin();
+Score.click();
